@@ -8,23 +8,17 @@ git status<br>
 git commit -m "teste"<br>
 git push<br>
 
-    <br>1  ruby
-    <br>2  ruby --version
-    <br>3  gem install rails
+    <br> 1  ruby
+    <br> 2  ruby --version
+    <br> 3  gem install rails
 <br>    4  mkdir app
 <br>    5  cd app
     <br>6  git init
-   
-<br>  7  rails new hello_app
- 
-<br>    8  git add .
-
+   <br>  7  rails new hello_app
+ <br>    8  git add .
 <br>     9  git commit -m "first"
- 
-<br>   10  heroku login
- 
-<br>   11  heroku add:key
-
+ <br>   10  heroku login
+ <br>   11  heroku add:key
 <br>    12  heroku keys:add
 <br>   13  bundle install --without production
 <br>   14  cd hello_app/
@@ -107,10 +101,8 @@ git push<br>
 <br>   91  git add .
 <br>   92  git commit -m "primeiro commit"
  <br>  93  git push heroku master
-  
-<br>  94  heroku create
- 
-<br>   95  git push heroku master
+  <br>  94  heroku create
+ <br>   95  git push heroku master
   <br> 96  heroku run rails db:migrate
  <br>  97  history > ../../cmmds2
 
