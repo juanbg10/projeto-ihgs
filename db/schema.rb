@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_29_041115) do
+ActiveRecord::Schema.define(version: 2019_05_06_175959) do
+
+  create_table "chairs", force: :cascade do |t|
+    t.integer "number"
+    t.integer "occupant_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "patron_id"
+  end
 
   create_table "locations", force: :cascade do |t|
     t.string "zip_code", limit: 8, null: false
@@ -20,11 +28,26 @@ ActiveRecord::Schema.define(version: 2019_04_29_041115) do
     t.string "public_place", limit: 100, null: false
     t.integer "number", null: false
     t.string "complement", null: false
-    t.integer "register_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "registers_id"
-    t.index ["registers_id"], name: "index_locations_on_registers_id"
+    t.integer "user_id"
+  end
+
+  create_table "occupants", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "chair_id"
+  end
+
+  create_table "patrons", force: :cascade do |t|
+    t.string "name"
+    t.text "bio"
+    t.date "date_of_born"
+    t.date "date_of_death"
+    t.integer "chair_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|
@@ -35,15 +58,16 @@ ActiveRecord::Schema.define(version: 2019_04_29_041115) do
     t.string "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
     t.string "photo"
     t.text "bio"
     t.string "office"
-    t.integer "register_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "registers", force: :cascade do |t|
@@ -52,11 +76,9 @@ ActiveRecord::Schema.define(version: 2019_04_29_041115) do
     t.string "celphone", null: false
     t.string "cpf", null: false
     t.date "birth", null: false
-    t.integer "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "locations_id"
-    t.index ["locations_id"], name: "index_registers_on_locations_id"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -68,6 +90,7 @@ ActiveRecord::Schema.define(version: 2019_04_29_041115) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "kind"
+    t.string "role"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
