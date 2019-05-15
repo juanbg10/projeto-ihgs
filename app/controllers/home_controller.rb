@@ -1,4 +1,7 @@
 class HomeController < ApplicationController
-  def index
+  
+  def default
+    render json: [].to_json
   end
+  
 end

@@ -30,6 +30,12 @@ gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', github: 'sferik/rails_admin'
 gem 'rails_admin_rollincode', '~> 1.1'
 
+#Upload de imagens
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem 'bootstrap', '~> 4.0.0.alpha5'
+gem 'simple_form'
+gem 'mini_magick', '~> 4.3'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

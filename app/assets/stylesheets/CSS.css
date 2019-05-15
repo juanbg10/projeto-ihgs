@@ -1,0 +1,325 @@
+@charset "utf-8";
+
+/* ---------------------------------------------- Body ---------------------------------------------- */
+
+body{margin:0; padding:0; overflow-x:hidden; font-family: 'Montserrat', sans-serif;}
+
+::-webkit-scrollbar-track{background-color:#000000;}
+::-webkit-scrollbar{width:0px;}
+::-webkit-scrollbar-thumb{background:#646464;}
+
+*:focus{outline: 0;}
+*{box-sizing: border-box; margin:0; padding:0; font-weight: normal; font-family: 'Montserrat', sans-serif; text-decoration: none !important;}
+
+textarea, input[type="text"], input[type="email"], input[type="tel"], input[type="button"], input[type="submit"] { -webkit-appearance: none; border-radius: 0px !important; box-shadow: 0 0 0 0;}
+
+textarea, input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i], input[type="text"], input[type="email"], input[type="tel"] ::-webkit-file-upload-button, button {border-radius: 0px !important;}
+
+textarea{resize: none;}
+
+/*@font-face {font-family: 'Lato Black'; src: url(../Fonte/Lato-Black.ttf);}*/
+
+@media only screen and (min-width:1024px){
+	
+/* ---------------------------------------------- Global ---------------------------------------------- */
+
+.content{height:100%; width: 1000px; position:relative; left: 50%; margin-left: -500px;}
+
+/* ----- Ocultando componentes Mobile ----- */ 
+
+.menu-animate-mobile{display: none;}
+
+/* ---------------------------------------------- Header ---------------------------------------------- */
+
+header{height:75px; width: 100%; background-color: hsla(0,0%,0%,0.00); position:fixed; z-index: 9999; padding: 0px 5%; transition: .5s;}
+
+.header-line{height:1px; width: 100%; background-color: #FFF; margin-top: 74px; position: relative;}
+
+nav{width: 800px; position:absolute; left:100%; margin-left:-850px; padding-top: 30px;}
+
+nav ul{margin:0; padding: 0; display: flex; text-align: center;}
+
+nav li{list-style: none;}
+
+nav a{font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 23px 40px; color:#FFF; cursor:pointer; transition:.5s; text-decoration: none; transition:.5s; font-weight: bold; border-bottom:5px solid transparent;}
+
+nav a:hover{border-bottom:5px solid #FFF;}
+
+.logo-menu{position: absolute; height: 35px; margin-top: 20px; margin-left: 40px;}
+
+.header-active{background-color:hsla(0,0%,0%,0.80);}
+
+.header-active2{background-color:hsla(0,0%,0%,0.80) !important;}
+
+/* ---------------------------------------------- Home ---------------------------------------------- */
+
+.home{height: 100vh; width:100%; position:relative; transition:1s; background-image: image-url('Home/home1.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;}
+
+.home-mask{background-color: hsla(0,0%,0%,0.60); height: 100%; width: 100%; position: absolute; z-index: 999;}
+
+.home-txt{position: absolute; top: 50%; z-index: 9998; color: #FFF; width: 1000px; left: 50%; margin-left: -500px; height: 200px; margin-top: -100px;}
+
+.home-txt h1{font-size: 45px; line-height: 55px; font-weight: bold;}
+.home-txt h3{font-size: 22px; font-weight: normal; padding: 30px 0px;}
+
+.home input[type=button]{background-color: hsla(0,0%,100%,0.00); height: 50px; width: 200px; color: #FFF; font-family: 'Montserrat', sans-serif; border:4px solid #FFF; font-size: 20px; cursor: pointer; transition: .3s; position: relative;  text-transform: uppercase; font-weight: bold;} 
+
+.home input[type=button]:hover{background-color: hsla(0,0%,0%,0.00); color: #ff1e1e; border:4px solid #ff1e1e;}
+
+.home-detalhe1{background-image: image-url("Home/home-detalhe.png"); height: 302px; width: 55px; position: absolute; z-index: 999; margin-top: -170px; left: 50%; margin-left: -500px;}
+
+.home-seta{background-image: image-url("Home/seta.png"); height: 17px; width: 32px; position: absolute; margin-top: 90px; margin-left: 11px;}
+
+/* ---------------------------------------------- Sobre ---------------------------------------------- */
+
+.sobre{width:100%; position:relative; background-color:#FFF; padding-bottom: 250px; padding-top: 100px;}
+
+.sobre h1{font-size: 40px; padding: 50px 0px; font-weight: bold; text-transform: uppercase;}
+
+.sobre h3{font-weight: normal; font-size: 16px; line-height: 25px; color: #FFF; text-transform: uppercase; font-weight: bold;}
+
+.sobre-content{height: 400px; width: 100%;}
+
+.sobre-content0{background-size: cover; background-position: center; cursor: pointer; filter: grayscale(1);}
+.sobre-content1{height: 100%; width: 33%; position: relative; background-image: image-url("Home/sobre0.jpg"); float: left;}
+.sobre-content2{height: 50%; width: 34%; position: relative; background-image: image-url("Home/sobre1.jpg"); float: left;}
+.sobre-content3{height: 50%; width: 34%; position: relative; background-image: image-url("Home/sobre2.jpg"); float: left;}
+.sobre-content4{height: 100%; width: 33%; position: relative; background-image: image-url("Home/sobre3.jpg"); margin-left:67%;}
+
+.sobre-mask{background-color: hsla(0,0%,0%,0.50); height: 100%; width: 100%; position: absolute; z-index: 999; transition: .5s; padding: 20px;}
+
+.sobre-mask:hover{background-color: hsla(0,0%,0%,0.00);}
+
+.sobre-content0:hover{filter: grayscale(0);}
+
+.home-detalhe2{background-image: url("../Imagens/Home/home-detalhe2.png"); height: 154px; width: 55px; position: absolute; z-index: 999; margin-top: 50px; left: 50%; margin-left: -500px;}
+
+/* ---------------------------------------------- Serviços ---------------------------------------------- */	
+	
+.servicos{width: 100%; color: #FFF;} 
+
+.servicos h1{font-size: 22px; font-weight: bold; padding: 20px 0px; text-transform: uppercase;}
+.servicos h3{text-align: justify; font-size: 15px; line-height: 25px;}
+
+.servicos-block{min-height: 470px; width: 100%;}
+
+.servicos-box{min-height: 470px; width: 33.33333%; float: left; text-align: center; padding:0px; position: relative; padding: 50px 4% 0px 4%;}
+		
+.servicos-box1, .servicos-box3{background-color: #ff1e1e;}	
+
+.servicos-box2{background-color: #272727;}
+	
+.servicos img{height: 100px;}	
+	
+.servicos a{font-weight: bold; text-align: left; cursor: pointer; text-decoration: none; color: #FFF; border-bottom: 1px solid transparent; transition: .3s;}
+
+.servicos a:hover{border-bottom: 1px solid #FFF;}
+
+.servicos-seta{height: 14px !important; margin-left: 14px;}
+	
+/* ---------------------------------------------- Blog ---------------------------------------------- */	
+
+.blog{height: 600px; width: 100%; background-image: image-url("Home/home0.jpg"); background-size: cover; background-position: center; color: #FFF;}
+
+.blog-mask{background-color: hsla(0,0%,0%,0.60); height: 100%; width: 100%; position: relative; z-index: 999; padding: 100px 0px;}
+	
+.blog-content1, .blog-content2{height:100%; width: 50%; float: left; padding: 0px 40px;}	
+	
+.blog-content1{text-align: right;}	
+	
+.blog h1{font-size: 90px; font-weight: bold; text-transform: uppercase; padding-top: 100px;}	
+	
+.blog h2{font-size: 30px; font-weight: bold; text-transform: uppercase;}		
+
+.blog h3{font-size: 40px; font-weight: bold; line-height: 30px; padding: 30px 0px; text-transform: uppercase; line-height: 50px;}		
+	
+.blog h4{font-size: 18px; font-weight: normal; line-height: 25px;}		
+
+.blog img{height: 80px; text-transform: uppercase;}	
+	
+.blog input[type=button]{background-color: #ff1e1e; height: 40px; width: 150px; border-radius: 30px; color: #FFF; font-family: 'Montserrat', sans-serif; border:2px solid transparent; font-size: 20px; cursor: pointer; transition: .3s; position: relative; font-weight: bold; text-transform: uppercase; border-radius: 10px !important; margin-top: 30px;} 
+
+.blog input[type=button]:hover{background-color: hsla(0,0%,0%,0.00); color: #ff1e1e; border:2px solid #ff1e1e;}	
+	
+/* ---------------------------------------------- Diretoria ---------------------------------------------- */	
+	
+.diretoria{height: 1070px; width: 100%; position: relative; padding: 70px 0px;}	
+	
+.diretoria h1{font-size: 40px; font-weight: bold; text-transform: uppercase; padding-left: 100px; border-bottom: 1px solid #ff1e1e; padding-bottom: 50px; margin-bottom: 20px;}	
+	 
+.diretoria h2{font-size: 24px; font-weight: bold; color:#ff1e1e; padding:50px 0px 10px 70px;}	 
+	 
+.diretoria h3{font-size: 18px; padding-left:70px; line-height: 25px;} 
+	 
+.diretoria-content1, .diretoria-content2{height: 100%; width: 50%; float: left; position: relative;}	
+	
+.diretoria .logo-diretoria{height: 80px; float: left; position: absolute; margin-top: -15px;}	
+	
+.number-diretoria{height: 30px; float: left; position: absolute; margin-top:56px;}
+
+/* ---------------------------------------------- Newsletter ---------------------------------------------- */	
+		
+.newsletter{width: 100%; background-color: #bb1313; color: #FFF; padding: 70px 0px;}		
+		
+.newsletter img{position: absolute; height: 80px;}		
+		
+.newsletter h1{font-size: 28px; font-weight: bold; padding-left: 150px; padding-bottom: 5px;}		
+
+.newsletter h3{font-size: 18px; font-weight: normal; padding-left: 150px; line-height: 25px;}	
+
+.newsletter input[type=email]{height: 40px; width: 300px; background-color:hsla(0,0%,0%,0.00); border:1px solid #FFF; border-radius: 40px !important; font-size: 16px; padding: 0px 20px; color: #FFF; position: absolute; left: 100%; margin-left: -300px; margin-top: -40px;}
+
+.newsletter input[type=button]{height: 40px; width:40px; background-color:#FFF; border:1px solid #FFF; border-radius: 0px 40px 40px 0px !important; font-size: 20px; color: #000; position: absolute; left: 100%; margin-left: -40px; margin-top: -40px; font-weight: bold; cursor: pointer; background-image: image-url("Home/seta3.png"); background-repeat: no-repeat; background-size: 10px; background-position: center; transition: .5s;}
+
+.newsletter input[type=button]:hover{background-color:rgba(210,210,210,1.00);}
+
+.newsletter ::placeholder {color: #FFF !important;}
+
+.erro{height:50px; width: 100%; position:fixed; background-color: #B90003; text-align: center; top: 100%; margin-top: -50px; z-index: 9999; line-height: 50px; display:none; color:#FFF; font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: normal;}
+	
+.success{height:50px; width: 100%; position:fixed; background-color: #2AB900; text-align: center; top: 100%; margin-top: -50px; z-index: 9999; line-height: 50px; display:none; color:#FFF; font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: normal;}
+
+/* ---------------------------------------------- Footer ---------------------------------------------- */	
+		
+footer{height:530px; width:100%; background-color:#272727; position: relative; color: #FFF; padding: 70px 0px; color: #FFF;}
+
+.footer-content{height:85%; width: 33.33333%; position: relative; float: left; text-align: left;}
+
+.footer-content2{height:15%; width: 33.33333%; position: relative; float: left; padding-top: 40px;}
+
+.footer-line{height: 1px; width: 100%; position: relative; background-color: #bb1313; clear: both;}
+
+footer img{height: 40px; float: left; margin-right: 20px;}
+
+footer h1{font-size: 22px; line-height: 25px; font-weight: bold; text-transform: uppercase; padding-bottom: 30px;}
+
+footer h3{font-size: 15px; line-height: 25px;}
+
+.footer-content h3{text-transform: uppercase; padding-bottom: 10px;}
+
+.footer-content2 h4{font-size: 13px; line-height: 20px;}
+
+footer ul li{list-style: none; line-height: 25px;}
+
+footer a{color: #FFF; transition: .3s; line-height: 35px;}
+
+footer a:hover{color:#bb1313;}
+
+.footer-logo{position: absolute; height: 40px;}
+
+/* ---------------------------------------------- Contato ---------------------------------------------- */	
+
+.contato{height:100vh; width: 100%; background-color: #FFF;}
+
+.contato-box1{height: 100vh; width:40%; position: relative; float: left; background-color: #ff1e1e;}
+
+.contato-box2{height: 100vh; width:60%; position: relative; float: left; background-color: #FFF;}
+
+.content-contato1{width: 100%; position: absolute; top: 50%; margin-top: -100px; color: #FFF; text-align: center;}
+
+.content-contato2{width: 100%; position: absolute; top: 50%; margin-top: -170px; color: #FFF; text-align: center;}
+
+.contato h1{font-size: 70px; padding: 30px 0px;}	
+	
+.contato h3{font-size: 30px;}
+
+.contato input[type=text], .contato input[type=email], .contato input[type=tel]{height: 50px; width: 60%; padding: 0px 15px; border: none; font-size: 15px; border:1px solid #000; transition:.3s;} 
+	
+.contato textarea{height: 130px; width: 60%; padding: 15px 15px; resize: none; border: none; font-size: 16px; border:1px solid transparent; transition:.3s; border:1px solid #000;} 
+	
+.contato input[type=button]{background-color: #ff1e1e; height: 50px; width: 150px; border-radius: 30px; color: #FFF; border:2px solid transparent; font-size: 18px; cursor: pointer; transition: .3s; right: 0; position: relative;} 
+
+.contato input[type=button]:hover{background-color: hsla(0,0%,0%,0.00); color: #ff1e1e; border:2px solid #ff1e1e;}
+	
+.contato input[type=text]:focus, .contato input[type=email]:focus, .contato input[type=tel]:focus, textarea:focus{border:1px solid #ff1e1e;}
+
+/* ---------------------------------------------- Transparencia ---------------------------------------------- */	
+
+.transparencia{width: 100%; background-color: #e1e1e1; position: relative;}
+
+.transparencia-content{width: 1000px; background-color: #FFFFFF; left: 50%; margin-left: -500px; position: relative; padding: 100px 50px;}
+
+.transparencia h1{font-size: 40px; padding: 30px 0px; border-bottom: 1px solid #000; text-align: center; margin-bottom: 50px;}
+
+.transparencia h3{line-height: 27px; font-size: 16px;}
+
+.transparencia a{color:#000; transition: .3s;}
+
+.transparencia a:hover{color:#ff1e1e;}
+
+/* ---------------------------------------------- Sobre - Interna ---------------------------------------------- */	
+
+.sobre-interna{width: 100%; background-color: #e1e1e1; position: relative;}
+
+.sobre-interna-content{width: 1000px; background-color: #FFFFFF; left: 50%; margin-left: -500px; position: relative; padding: 100px 50px;}
+
+.sobre-interna h1{font-size: 40px; padding: 30px 0px; border-bottom: 1px solid #000; text-align: center; margin-bottom: 50px;}
+
+.sobre-interna h3{line-height: 27px; font-size: 16px;}
+
+.sobre-interna a{color:#000; font-weight: bold;}
+
+.sobre-interna .legenda{height: 50px; width: 70%; background-color:#e1e1e1; margin-left: 15%; line-height: 50px;}
+
+.sobre-imagens{text-align: center;}
+
+.sobre-img{width: 70%; margin-top: 50px;}
+
+/* ---------------------------------------------- Projetos - Interna ---------------------------------------------- */	
+
+.projetos-interna{width: 100%; background-color: #e1e1e1; position: relative;}
+
+.projetos-content{width: 1000px; background-color: #FFFFFF; left: 50%; margin-left: -500px; position: relative; padding: 100px 50px;}
+
+.projetos-interna h1{font-size: 40px; padding: 30px 0px; border-bottom: 1px solid #000; text-align: center; margin-bottom: 50px;}
+
+.projetos-interna h3{line-height: 27px; font-size: 16px;}
+
+.projetos-interna a{color:#000; font-weight: bold;}
+
+.projetos-interna .legenda{height: 50px; width: 50%; background-color:#e1e1e1; margin-left: 25%; line-height: 50px; text-align: center; margin-bottom: 50px;}
+
+.projetos-img{width: 50%; margin-top: 50px; margin-left: 25%;}
+
+/* ---------------------------------------------- Transparencia ---------------------------------------------- */	
+
+.membros{width: 100%; background-color: #e1e1e1; position: relative;}
+
+.membros-content{width: 1000px; background-color: #FFFFFF; left: 50%; margin-left: -500px; position: relative; padding: 100px 50px;}
+
+.membros h1{font-size: 40px; padding: 30px 0px; border-bottom: 1px solid #000; text-align: center; margin-bottom: 50px;}
+
+.membros h2{line-height: 30px; font-size: 16px; font-weight: bold; padding-bottom: 20px;}
+
+.membros h3{line-height: 35px; font-size: 16px;}
+
+.membros a{color:#000;}
+
+/* ----- Slider ----- */
+
+.jssor-1{position:relative;margin:0 auto;top:0px;left:0px;width:1700px;height:900px;overflow:hidden;visibility:hidden;}
+
+.jssor-slides{cursor:default;position:relative;top:0px;left:0px;width:1700px;height:900px;overflow:hidden;}
+
+.jssorl-009-spin img {
+	animation-name: jssorl-009-spin;
+	animation-duration: 1.6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+.jssorb031 {position:absolute;}
+.jssorb031 .i {position:absolute;cursor:pointer;}
+.jssorb031 .i .b {fill:#000;fill-opacity:1;stroke:#fff;stroke-width:1200;stroke-miterlimit:10;stroke-opacity:0.3;}
+.jssorb031 .i:hover .b {fill:#fff;fill-opacity:.7;stroke:#000;stroke-opacity:.5;}
+.jssorb031 .iav .b {fill:#fff;stroke:#000;fill-opacity:1;}
+.jssorb031 .i.idn {opacity:.3;}
+		
+}
+
+

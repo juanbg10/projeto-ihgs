@@ -1,3 +1,3 @@
 class Patron < ApplicationRecord
-    belongs_to :chair
+    #belongs_to :chair
 end

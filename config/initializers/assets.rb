@@ -2,7 +2,11 @@
 
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
-
+Rails.application.config.assets.precompile += %w( CSS.css )
+Rails.application.config.assets.precompile += %w( Mobile.css )
+Rails.application.config.assets.precompile += %w( jQuery.js )
+Rails.application.config.assets.precompile += %w( Slider.js )
+Rails.application.config.assets.precompile += %w( Script.js )
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path
 # Add Yarn node_modules folder to the asset load path.
