@@ -7,6 +7,60 @@ $(document).ready(function(){
 		$(".home-seta").animate({"margin-top":"90px"});
 	},500);
 
+/* ---------- Patronos - JSON ---------- */
+	
+	var url = window.location.href;
+	var params = url.split("?=")[1];
+	
+	$.getJSON('/api/patrons', function(data) {
+	  
+	  var nameJson = '';
+	  var name = '';
+	  var bio = '';
+	  var img = '';
+	  var dateBorn = '';
+	  var dateDeath = '';
+	  
+	  for (i = 0; i < data.length; i++) {
+		nameJson += "<h3><a href=\"patronos-select.html?="+data[i].id+"\">"+data[i].name+"</a></h3>";
+	  }
+	  $(".patronos-json").html(nameJson);
+	  
+	  params = parseInt(params) - 1;
+	  name += data[params].name;
+	  bio += data[params].bio;
+	  img += data[params].id;
+	  dateBorn += data[params].date_of_born;
+	  dateDeath += data[params].date_of_death;
+	  
+	  $(".name-patrono-select").html(name);
+	  $(".bio-patrono-select").html(bio);
+	  $(".img-patrono").css({"background-image":"url(\"/Imagens/Patronos/"+img+".jpg\")"});
+	  $(".date-born").html(dateBorn);
+	  $(".date-death").html(dateDeath);
+	  
+	});
+	
+	/* ---------- Blog - JSON ---------- */
+	
+	$.getJSON('/api/posts', function(data) {
+	  
+	  var postBlog = '';
+	  var imgBlog = '';
+	  var titleBlog = '';
+	  var subtitleBlog = '';
+	  
+	  for (i = 0; i < data.length; i++) {
+	  	//$(".imgBlog").css({"background-image": "url:(\""+data[i].image.url+"\")"});
+	  	postBlog += "<img src="+data[i].image.url+" class=\"imgBlog\"/>";
+		postBlog += "<div class=\"titleBlog\">"+data[i].title+"</div>";
+		postBlog += "<div class=\"subtitleBlog\">"+data[i].subtitle+"</div>";
+	
+	  }
+	  $(".blog-json").html(postBlog);
+	  
+	});
+
 /* ---------- Window Scroll ---------- */	
 	
 	var home = $(window).innerHeight() - 100;
@@ -127,6 +181,12 @@ $(".servicos a").click(function(e){
 		window.location.href = "projetos.html";
 	}
 });
+
+/* ---------- Blog - Home ---------- */	
+	
+	$(".btn-blog-redir").click(function(){
+		window.location.href = "blog.html";	
+	});
 
 /* ---------- Newsletter ---------- */	
 	

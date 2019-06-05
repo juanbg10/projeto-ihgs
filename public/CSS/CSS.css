@@ -45,7 +45,7 @@ nav a{font-family: 'Montserrat', sans-serif; font-size: 16px; padding: 23px 40px
 
 nav a:hover{border-bottom:5px solid #FFF;}
 
-.logo-menu{position: absolute; height: 35px; margin-top: 20px; margin-left: 40px;}
+.logo-menu{position: absolute; height: 35px; margin-top: 20px; margin-left: 40px; cursor: pointer;}
 
 .header-active{background-color:hsla(0,0%,0%,0.80);}
 
@@ -105,7 +105,7 @@ nav a:hover{border-bottom:5px solid #FFF;}
 
 .servicos-box{min-height: 470px; width: 33.33333%; float: left; text-align: center; padding:0px; position: relative; padding: 50px 4% 0px 4%;}
 		
-.servicos-box1, .servicos-box3{background-color: #ff1e1e;}	
+.servicos-box1, .servicos-box3{background-color: #bb1313;}	
 
 .servicos-box2{background-color: #272727;}
 	
@@ -209,11 +209,13 @@ footer a:hover{color:#bb1313;}
 
 /* ---------------------------------------------- Contato ---------------------------------------------- */	
 
-.contato{height:100vh; width: 100%; background-color: #FFF;}
+.contato{height:100vh; width: 100%; background-image: url("/Imagens/Home/home1.jpg"); background-size: cover; background-position: center;}
 
-.contato-box1{height: 100vh; width:40%; position: relative; float: left; background-color: #ff1e1e;}
+.contato-mask{height: 100%; width: 100%; position: absolute; background-color: hsla(0,0%,0%,0.60);}
 
-.contato-box2{height: 100vh; width:60%; position: relative; float: left; background-color: #FFF;}
+.contato-box1{height: 100vh; width:50%; position: relative; float: left;}
+
+.contato-box2{height: 100vh; width:40%; position: relative; float: left; background-color: hsla(0,0%,100%,0.70);}
 
 .content-contato1{width: 100%; position: absolute; top: 50%; margin-top: -100px; color: #FFF; text-align: center;}
 
@@ -227,12 +229,10 @@ footer a:hover{color:#bb1313;}
 	
 .contato textarea{height: 130px; width: 60%; padding: 15px 15px; resize: none; border: none; font-size: 16px; border:1px solid transparent; transition:.3s; border:1px solid #000;} 
 	
-.contato input[type=button]{background-color: #ff1e1e; height: 50px; width: 150px; border-radius: 30px; color: #FFF; border:2px solid transparent; font-size: 18px; cursor: pointer; transition: .3s; right: 0; position: relative;} 
+.contato input[type=button]{background-color: #000; height: 50px; width: 150px; border-radius: 30px; color: #FFF; border:2px solid transparent; font-size: 18px; cursor: pointer; transition: .3s; right: 0; position: relative;} 
 
-.contato input[type=button]:hover{background-color: hsla(0,0%,0%,0.00); color: #ff1e1e; border:2px solid #ff1e1e;}
+.contato input[type=button]:hover{background-color: hsla(0,0%,0%,0.00); color: #000; border:2px solid #000;}
 	
-.contato input[type=text]:focus, .contato input[type=email]:focus, .contato input[type=tel]:focus, textarea:focus{border:1px solid #ff1e1e;}
-
 /* ---------------------------------------------- Transparencia ---------------------------------------------- */	
 
 .transparencia{width: 100%; background-color: #e1e1e1; position: relative;}
@@ -281,7 +281,7 @@ footer a:hover{color:#bb1313;}
 
 .projetos-img{width: 50%; margin-top: 50px; margin-left: 25%;}
 
-/* ---------------------------------------------- Transparencia ---------------------------------------------- */	
+/* ---------------------------------------------- Membros ---------------------------------------------- */	
 
 .membros{width: 100%; background-color: #e1e1e1; position: relative;}
 
@@ -294,6 +294,68 @@ footer a:hover{color:#bb1313;}
 .membros h3{line-height: 35px; font-size: 16px;}
 
 .membros a{color:#000;}
+
+/* ---------------------------------------------- Patronos ---------------------------------------------- */	
+
+.patronos{width: 100%; background-color: #e1e1e1; position: relative;}
+
+.patronos-content{width: 1000px; background-color: #FFFFFF; left: 50%; margin-left: -500px; position: relative; padding: 100px 50px;}
+
+.patronos h1{font-size: 40px; padding: 30px 0px; border-bottom: 1px solid #000; text-align: center; margin-bottom: 50px;}
+
+.patronos h3{line-height: 35px; font-size: 16px;}
+
+.patronos a{color:#000;}
+
+/* ---------------------------------------------- Blog ---------------------------------------------- */
+
+.blog-intern{width: 100%; background-color: #e1e1e1; position: relative;}
+
+.blog-intern-content{width: 1000px; background-color: #FFFFFF; left: 50%; margin-left: -500px; position: relative; padding: 100px 100px;}
+
+.blog-intern h1{font-size: 40px; padding: 30px 0px; border-bottom: 1px solid #000; text-align: center; margin-bottom: 80px;}
+
+.blog-intern h3{line-height: 35px; font-size: 16px;}
+
+.blog-intern a{color:#000;}
+
+.blog-intern .imgBlog{width:100%; position: relative; background-size: cover; background-position: center; margin:0;}
+
+.blog-intern .titleBlog{width:100%; background-color:#272727; position: relative; padding:20px 20px; color: #FFF; font-size: 18px;}
+
+.blog-intern .subtitleBlog{width:100%; background-color:#e1e1e1; position: relative; padding:20px 20px; color: #000; font-size: 18px; margin-bottom: 50px;}
+
+/* ---------------------------------------------- Patronos ---------------------------------------------- */	
+
+.patronos-select{height: 100vh; width: 100%; background-color: #FFF; position: relative; padding:75px 0px 150px 0px;}
+
+.img-patrono{height:100vh; width:30%; position: relative; background-size: cover; background-position: center; float: left; background-image: url("/Imagens/Patronos/default.png");}
+
+.content-patrono-select{height:100vh; width:70%; position: center; float:left; overflow-y: auto; padding: 0px 80px 150px 80px;}
+
+.patronos-select h1{font-size: 30px; padding: 50px 0px 30px 0px; border-bottom: 1px solid #000; text-align: center; margin-bottom: 50px;}
+
+.patronos-select h2{line-height: 30px; font-size: 16px; font-weight: bold; padding-bottom: 20px;}
+
+.patronos-select h3{line-height: 25px; font-size: 16px;}
+
+.patronos-select a{color:#000;}
+
+.patronos-select .date{height:50px; width:100%; background-color: #bb1313; line-height: 50px; position: relative; top: 100%; margin-top: -125px; z-index: 99; text-align: center;}
+
+.patronos-select .date a{color:#FFF; font-weight: bold;}
+
+.patronos-select .separar{padding:0px 5px;}
+
+.content-patrono-select::-webkit-scrollbar-track{background-color:#FFF;}
+.content-patrono-select::-webkit-scrollbar{width:5px;}
+.content-patrono-select::-webkit-scrollbar-thumb{background:#646464;}
+
+/* ---------------------------------------------- Login ---------------------------------------------- */	
+
+.login{height:100vh; width: 100%; background-size: cover; background-position: center; position: relative; background-image: url("/Imagens/Home/home1.jpg");}
+
+.login-mask{background-color: hsla(0,0%,0%,0.60); height: 100%; width: 100%; position: absolute; z-index: 999;}
 
 /* ----- Slider ----- */
 

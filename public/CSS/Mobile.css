@@ -84,7 +84,7 @@ header img{height:40px; margin-top:5px; margin-left:20px;}
 
 .servicos-box{width: 100%; text-align: center; padding:50px 5%; position: relative;}
 		
-.servicos-box1, .servicos-box3{background-color: #ff1e1e;}	
+.servicos-box1, .servicos-box3{background-color: #bb1313;}	
 
 .servicos-box2{background-color: #272727;}
 	
@@ -232,11 +232,13 @@ footer a{color: #FFF; transition: .3s; line-height: 35px; font-size: 15px;}
 
 /* ---------------------------------------------- Contato ---------------------------------------------- */	
 
-.contato{width: 100%; background-color: #FFF;}
+.contato{width: 100%; background-image: url("/Imagens/Home/home1.jpg"); background-size: cover; background-position: center;}
 
-.contato-box1{width:100%; position: relative; background-color: #ff1e1e; color: #FFF; text-align: center; padding: 50px;}
+.contato-mask{height: 100%; width: 100%; background-color: hsla(0,0%,0%,0.60); position: relative;}
 
-.contato-box2{width:100%; position: relative; background-color: #FFF; text-align: center; padding: 50px 0px;}
+.contato-box1{width:100%; position: relative; color: #FFF; text-align: center; padding: 50px;} 
+
+.contato-box2{width:100%; position: relative; background-color: hsla(0,0%,100%,0.70); text-align: center; padding: 50px 0px;}
 
 .contato h1{font-size: 40px; padding: 30px 0px;}	
 	
@@ -246,7 +248,57 @@ footer a{color: #FFF; transition: .3s; line-height: 35px; font-size: 15px;}
 	
 .contato textarea{height: 130px; width: 80%; padding: 15px 15px; resize: none; border: none; font-size: 16px; border:1px solid transparent; transition:.3s; border:1px solid #000;} 
 	
-.contato input[type=button]{background-color: #ff1e1e; height: 50px; width: 150px; border-radius: 30px; color: #FFF; border:2px solid transparent; font-size: 18px; cursor: pointer; transition: .3s; right: 0; position: relative;} 
+.contato input[type=button]{background-color: #000; height: 50px; width: 150px; border-radius: 30px; color: #FFF; border:2px solid transparent; font-size: 18px; cursor: pointer; transition: .3s; right: 0; position: relative;} 
+
+/* ---------------------------------------------- Patronos ---------------------------------------------- */	
+
+.patronos{width: 90%; margin-left: 5%; background-color: #FFF; position: relative; padding: 70px 0px;}
+
+.patronos h1{font-size: 40px; padding: 30px 0px; border-bottom: 1px solid #000; text-align: center; margin-bottom: 50px;}
+
+.patronos h3{line-height: 35px; font-size: 16px; color:#000;}
+
+.patronos a{color:#000 !important;}
+
+/* ---------------------------------------------- Patronos ---------------------------------------------- */	
+
+.patronos-select{width: 100%; background-color: #FFF; position: relative; padding:70px 0px;}
+
+.img-patrono{height:300px; width:80%; position: relative; background-size: cover; background-position: center; background-image: url("/Imagens/Patronos/default.png"); margin-left: 10%; margin-top: 20px;}
+
+.content-patrono-select{width:100%; position: center; overflow-y: auto; padding: 70px 5% 0px 5%;}
+
+.patronos-select h1{font-size: 22px; padding: 20px 0px 30px 0px; border-bottom: 1px solid #000; text-align: center; margin-bottom: 40px; line-height: 40px;}
+
+.patronos-select h2{line-height: 30px; font-size: 16px; font-weight: bold; padding-bottom: 20px;}
+
+.patronos-select h3{line-height: 25px; font-size: 16px;}
+
+.patronos-select a{color:#000;}
+
+.patronos-select .date{height:50px; width:100%; background-color: #bb1313; line-height: 50px; position: relative; top: 100%; z-index: 99; text-align: center; font-size:14px;}
+
+.patronos-select .date a{color:#FFF; font-weight: bold;}
+
+.patronos-select .separar{padding:0px 5px;}
+
+/* ---------------------------------------------- Blog ---------------------------------------------- */
+
+.blog-intern{width: 100%; background-color: #FFF; position: relative; padding:70px 0px;}
+
+.blog-intern-content{padding:5%;}
+
+.blog-intern h1{font-size: 40px; padding: 30px 0px; border-bottom: 1px solid #000; text-align: center; margin-bottom: 80px;}
+
+.blog-intern h3{line-height: 35px; font-size: 16px;}
+
+.blog-intern a{color:#000;}
+
+.blog-intern .imgBlog{width:100%; position: relative; background-size: cover; background-position: center; margin:0;}
+
+.blog-intern .titleBlog{width:100%; background-color:#272727; position: relative; padding:20px 20px; color: #FFF; font-size: 15px;}
+
+.blog-intern .subtitleBlog{width:100%; background-color:#e1e1e1; position: relative; padding:20px 20px; color: #000; font-size: 15px; margin-bottom: 50px;}
 
 /* ----- Slider ----- */
 
